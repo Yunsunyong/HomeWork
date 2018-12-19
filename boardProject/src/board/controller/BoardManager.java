@@ -2,6 +2,8 @@ package board.controller;
 
 import java.util.*;
 import java.io.*;
+import java.text.SimpleDateFormat;
+
 import board.model.vo.*;
 
 public class BoardManager {
@@ -20,20 +22,22 @@ public class BoardManager {
 	
 	public void writeBoard() {
 			
+			Calendar cal = new GregorianCalendar();
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 			StringBuilder sb = new StringBuilder();
 			System.out.println("새 게시글 쓰기 입니다.");
 			System.out.print("글제목 :");
 			String name = sc.nextLine();
 			System.out.print("작성자 :");
 			String author = sc.next();
-			Date d = new Date();
+					
 			sc.nextLine();
 			System.out.println("글 내용 입력하십시오.");
 			String str = null;
 			while(!(str = sc.nextLine()).equals("exit")) {
 				sb.append(str);
 			}			
-			Board b = new Board(list.size(),name,author,d,sb.toString(),0);
+			Board b = new Board(list.size(),name,author,b,sb.toString(),0);
 			list.add(b);
 	}
 	public void dispalyAllList() {

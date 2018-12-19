@@ -8,11 +8,11 @@ public class Secretary extends Employee implements Bonus{
 	}
 
 	public double tax() {
-		return super.getSalary()*0.9;
+		return super.getSalary()*0.1;
 	}
 	
 	@Override
 	public void incentive(int pay) {
-		super.setSalary(super.getSalary() - (int)(pay *0.8));
+		super.setSalary(super.getSalary() + (int)(pay *0.8));
 	}
 }

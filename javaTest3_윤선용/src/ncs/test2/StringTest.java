@@ -1,5 +1,7 @@
 package ncs.test2;
 
+import java.util.Arrays;
+
 public class StringTest {
 
 	public static void main(String[] args) {
@@ -8,11 +10,18 @@ public class StringTest {
 		double sum = 0;
 		
 		String[] st = str.split(",");
+		int count = 0;
+		for(String std : st) {
+			/*double d = Double.valueOf(std);*/
+			double d = Double.parseDouble(std);
+			data[count] = d;
+			sum += data[count];
+			count++;
+		}		
+		System.out.printf("합계 : %.3f",sum);
+		System.out.printf("\n평균 : %.3f",sum/data.length);
 		
-		for(String ss : st) {
-			ss.valueOf(data);
-			
-		}
+		
 	}
 
 }

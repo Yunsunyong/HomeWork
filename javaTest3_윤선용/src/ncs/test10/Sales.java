@@ -9,7 +9,7 @@ public class Sales extends Employee implements Bonus{
 	
 	@Override
 	public double tax() {
-		return super.getSalary()*0.87;
+		return super.getSalary()*0.13;
 	}
 	@Override
 	public void incentive(int pay) {

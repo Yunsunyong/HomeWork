@@ -12,7 +12,6 @@ public class StringTest {
 		String[] st = str.split(",");
 		int count = 0;
 		for(String std : st) {
-			/*double d = Double.valueOf(std);*/
 			double d = Double.parseDouble(std);
 			data[count] = d;
 			sum += data[count];

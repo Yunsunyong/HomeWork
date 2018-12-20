@@ -75,8 +75,7 @@ public class User {
 	public boolean equals(Object obj) {
 		
 		User u = (User)obj;
-		
-		
+			
 		return this.id.equals(u.id) && this.password.equals(u.password) && this.name.equals(u.name) && 
 				this.age == u.age && this.gender == u.gender && this.phone.equals(u.phone);
 	}

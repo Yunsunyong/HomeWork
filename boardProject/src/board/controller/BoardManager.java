@@ -37,8 +37,8 @@ public class BoardManager {
 			while(!(str = sc.nextLine()).equals("exit")) {
 				sb.append(str);
 			}			
-			Board b = new Board(list.size(),name,author,b,sb.toString(),0);
-			list.add(b);
+			//Board b = new Board(list.size(),name,author,b,sb.toString(),0);
+			//list.add(b);
 	}
 	public void dispalyAllList() {
 		for(Board b : list) {

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>보너스포인트 적용된 연봉결과</comment>
+<entry key="20100908">나미리 기획부 2300000 0.21</entry>
+<entry key="20150302">한교민 인사부 2800000 0.31</entry>
+<entry key="20121109">소이만 영업부 3000000 0.11</entry>
+<entry key="20100505">김상수 외교부 2000000 0.11</entry>
+<entry key="20110715">동만이 총무부 2500000 0.21</entry>
+</properties>

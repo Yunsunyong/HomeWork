@@ -10,16 +10,16 @@ public class TestProperties {
 	public static void main(String[] args) {
 		TestProperties test = new TestProperties();
 		Properties prop = new Properties();
+		
 		Employee[] em = test.readFile(prop);
 		test.printConsole(prop);
-		System.out.println("============");
 		test.addEmpData(prop);
 		test.printConsole(prop);
 		test.saveEmpXML(em);	
 	}
 	public void addEmpData(Properties p) {
-		p.put("20160412", "홍길동,기획부,3800000,0.1");
-		p.put("20140811", "포로리,홍보부,1800000,0.2");
+		p.setProperty("20160412", "홍길동,기획부,3800000,0.1");
+		p.setProperty("20140811", "포로리,홍보부,1800000,0.2");
 	}
 	public Employee[] readFile(Properties p) {
 		
@@ -55,14 +55,10 @@ public class TestProperties {
 	}
 	public void saveEmpXML(Employee[] er) {
 		Properties prop = new Properties();
-		Set s = prop.keySet();
-		List l = new ArrayList(s);
 		
 		for(Employee em : er) {
-			int dsal = (int)(em.getSalary() * em.getBonusPoint());
-			
-			prop.setProperty(String.valueOf(em.getEld()), em.toString());	
-			
+			String value = em.toString() + (int)(em.getSalary() + (em.getSalary() * em.getBonusPoint()));
+			prop.setProperty(String.valueOf(em.getEld()), value);		
 		}
 		
 		try {
